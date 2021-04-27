@@ -9,7 +9,7 @@ const CORS_PROXY_PORT = 5000;
 corsAnywhere.createServer({
   originWhitelist: [], // Allow all origins
 
-  requireHeader: ['origin', 'x-requested-with'],
+  // requireHeader: ['origin', 'x-requested-with'],
 
 }).listen(CORS_PROXY_PORT, () => {
   console.log(

@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+  corsproxyserver:
+    image: corsproxyserver
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: production
+      PORT: 8769
+    ports:
+      - 8769:8769
