@@ -1,0 +1,11 @@
+---
+application:
+  name: "corsproxyserver1"
+  project: "vvvvvv"
+  organization: "QoveryCommunity"
+routers:
+- name: "main-corsproxyserver1"
+  routes:
+  - application_name: "corsproxyserver1"
+    paths:
+    - "/*"
