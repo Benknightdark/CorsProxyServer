@@ -6,7 +6,12 @@ const expressHttpProxy = require('express-http-proxy');
 const CORS_PROXY_PORT = 5000;
 
 // Create CORS server
-corsAnywhere.createServer({}).listen(CORS_PROXY_PORT, () => {
+corsAnywhere.createServer({
+  originWhitelist: [], // Allow all origins
+
+  requireHeader: ['origin', 'x-requested-with'],
+
+}).listen(CORS_PROXY_PORT, () => {
   console.log(
     `Internal CORS Anywhere server started at port ${CORS_PROXY_PORT}`
   );
